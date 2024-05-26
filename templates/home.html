@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="max-w-md w-full p-6 bg-white rounded-md shadow-md">
+        <h1 class="text-3xl font-semibold mb-6 text-center">Welcome to the Authentication System!</h1>
+        {% if error %}
+        <p class="text-red-500 mb-4">{{ error }}</p>
+        {% endif %}
+        <div class="flex justify-center space-x-4">
+            <a href="{{ url_for('login') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Login</a>
+            <a href="{{ url_for('register') }}" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Register</a>
+        </div>
+    </div>
+</body>
+</html>

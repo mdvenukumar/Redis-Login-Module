@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-10">
+        <h2 class="text-2xl font-semibold mb-5">Dashboard</h2>
+        {% if error %}
+        <p class="text-red-500">{{ error }}</p>
+        {% endif %}
+        <p>Welcome, {{ session['username'] }}!</p>
+        <p><a href="{{ url_for('logout') }}" class="text-red-500 hover:underline">Logout</a></p>
+    </div>
+</body>
+</html>
